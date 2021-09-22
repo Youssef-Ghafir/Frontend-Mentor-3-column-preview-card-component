@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+p,button {
+    font-family: 'Lexend Deca', sans-serif;
+}
+body {
+    background-color: #F2F2F2;
+    padding: 50px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+}
+.card {
+    width: 100%;
+}
+.card .container {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.card .container .content {
+    min-width: 333px;
+    min-height: 520px;
+    position: relative;
+    flex: 1;
+    padding: 50px 40px;
+} 
+.card .container .content:first-of-type {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card .container .content:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+.card .container .content:last-of-type {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--Very-dark-cyan);
+}
+.card .container .content .logo {
+    margin-bottom: 2rem;
+}
+.card .container .content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.card .container .content p {
+    line-height: 1.8;
+    max-width: 350px;
+    font-weight: normal;
+    color:  hsla(0, 0%, 100%, 0.75);
+}
+.card .container .content button {
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 40px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: .2s all;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid transparent;
+}
+.card .container .content button:hover {
+    background-color: inherit;
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+.card .container .content:first-of-type button {
+    color: var(--Bright-orange);
+}
+.card .container .content:last-of-type button {
+    color: var(--Very-dark-cyan);
+} 
+.card .container .content:nth-child(2) button  {
+    color: var(--Dark-cyan);
+}
+@media (max-width:1300px) {
+    .card .container .content:first-of-type {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius:0;
+        border-top-right-radius: 10px;
+    }
+    .card .container .content:last-of-type {
+        border-top-right-radius:0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+@media (max-width:500px) {
+    .card .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 13px;
+   }
+}
